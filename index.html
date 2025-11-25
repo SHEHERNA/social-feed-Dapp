@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Social Feed DApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1 class="title">🚀 Social Feed DApp</h1>
+    <button id="connectButton" class="btn connect-btn">Connect Wallet</button>
+  </div>
+
+  <div class="main-container">
+
+    <div class="card wallet-info">
+      <h2>Wallet</h2>
+      <p id="account" class="info"></p>
+      <p id="network" class="info"></p>
+    </div>
+
+    <div id="postBox" class="card hidden">
+      <h2>Create Post</h2>
+      <textarea id="messageInput" placeholder="Share your thoughts..." maxlength="200"></textarea>
+      <button id="postButton" class="btn post-btn">Post Message</button>
+      <p id="status" class="status"></p>
+    </div>
+
+    <div class="card feed-card">
+      <h2>Latest Posts</h2>
+      <div id="feed" class="feed"></div>
+      <button id="refreshButton" class="btn refresh-btn">Refresh Feed</button>
+    </div>
+
+  </div>
+
+  <!-- ethers.js v5 (WORKING VERSION) -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
